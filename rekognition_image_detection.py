@@ -230,14 +230,14 @@ def usage_demo():
 
     logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
     rekognition_client = boto3.client('rekognition')
-    street_scene_file_name = "./media/pexels-kaique-rocha-109919.jpg"
-    celebrity_file_name = "./media/pexels-pixabay-53370.jpg"
+    street_scene_file_name = "./media/img-167178571942761febba8354ae1be36d4578156c51f47c9550e292a5ea2db1bba99bf1a5928ae.jpg"
+    celebrity_file_name = "./media/f8b008e4a2cb8a9860f682a8b82341c3ab1a74fb_hq.jpg"
     one_girl_url = 'https://dhei5unw3vrsx.cloudfront.net/images/source3_resized.jpg'
     three_girls_url = 'https://dhei5unw3vrsx.cloudfront.net/images/target3_resized.jpg'
     swimwear_object = boto3.resource('s3').Object(
         'console-sample-images-pdx', 'yoga_swimwear.jpg')
     book_file_name = './media/pexels-christina-morillo-1181671.jpg'
-
+    
     street_scene_image = RekognitionImage.from_file(
         street_scene_file_name, rekognition_client)
     print(f"Detecting faces in {street_scene_image.image_name}...")
