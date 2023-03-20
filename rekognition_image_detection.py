@@ -236,8 +236,13 @@ def usage_demo():
     three_girls_url = 'https://dhei5unw3vrsx.cloudfront.net/images/target3_resized.jpg'
     swimwear_object = boto3.resource('s3').Object(
         'console-sample-images-pdx', 'yoga_swimwear.jpg')
+<<<<<<< HEAD
     book_file_name = './media/pexels-christina-morillo-1181671.jpg'
     
+=======
+    book_file_name = './media/backgroud.png'
+
+>>>>>>> ad77be2249181e1cd0bda2be2675ef93ab9ab037
     street_scene_image = RekognitionImage.from_file(
         street_scene_file_name, rekognition_client)
     print(f"Detecting faces in {street_scene_image.image_name}...")
